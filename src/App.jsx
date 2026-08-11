@@ -594,6 +594,7 @@ function ServiceCard({ service, index }) {
           index,
           "whatsappMessage",
         )}
+        data-coruja-value={message}
         data-coruja-event="whatsapp_click"
         data-coruja-event-label={`service_card_${index + 1}_whatsapp`}
         {...editableButton(
@@ -906,6 +907,7 @@ function HomePage() {
               target="_blank"
               rel="noopener"
               data-coruja-url-path="pages.home.emergency.whatsappMessage"
+              data-coruja-value={emergencyMessage}
               data-coruja-event="whatsapp_click"
               data-coruja-event-label="emergency_whatsapp"
               {...editableButton(
