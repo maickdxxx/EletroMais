@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "contractVersion": 2,
+  "templateId": "eletromais",
+  "name": "EletroMais",
+  "version": "1.0.0",
+  "visibility": "public_catalog",
+  "description": "Template moderno e claro para eletricistas, com projetos, avaliações, formulário, blog e edição completa no Coruja Host.",
+  "thumbnailUrl": "",
+  "coverUrl": "",
+  "renderer": { "entry": "src/coruja-template/index.ts", "mode": "compiled_required", "framework": "vite-react-spa", "buildCommand": "npm run build", "outputDirectory": "dist" },
+  "deploy": { "mode": "static", "buildCommand": "npm run build", "outputDir": "dist", "rootDir": "" },
+  "paths": { "manifest": "src/coruja-template/manifest.json", "integration": "src/coruja-template/integration.json", "editableSchema": "src/coruja-template/editable-schema.json", "defaults": "src/coruja-template/defaults.json", "routes": "src/coruja-template/routes.json", "theme": "src/coruja-template/theme.json" },
+  "features": { "blog": true, "services": true, "contactForm": true, "whatsapp": true, "serviceAreas": true, "cityPages": false },
+  "capabilities": { "blog": true, "collections": ["stats", "services", "benefits", "projects", "reviews", "values", "process", "serviceAreas", "faq"] },
+  "supports": { "blog": true, "services": true, "seoPerPage": true, "whatsapp": true, "contactForm": true, "editableImages": true, "previewBySlug": true, "visualEditor": true, "themeColors": true, "collections": true, "analytics": true, "favicon": true, "optionalPages": false },
+  "blog": { "enabled": true, "enabledPath": "blog.enabled", "indexRoute": "/blog", "postRoute": "/blog/:slug", "source": "coruja" },
+  "routes": [
+    { "type": "page", "path": "/", "pageId": "home" },
+    { "type": "page", "path": "/servicos", "pageId": "services" },
+    { "type": "page", "path": "/sobre", "pageId": "about" },
+    { "type": "page", "path": "/contato", "pageId": "contact" },
+    { "type": "blogList", "path": "/blog", "pageId": "blog", "requiresBlog": true },
+    { "type": "blogPost", "path": "/blog/:slug", "pageId": "blog", "requiresBlog": true }
+  ],
+  "seo": { "renderingMode": "csr", "indexableRoutes": [
+    { "path": "/", "titlePath": "pages.home.seo.title", "descriptionPath": "pages.home.seo.description", "h1Path": "pages.home.hero.title", "canonicalPath": "global.seo.canonicalBase", "schemaTypes": ["Electrician", "WebSite"] },
+    { "path": "/servicos", "titlePath": "pages.services.seo.title", "descriptionPath": "pages.services.seo.description", "h1Path": "pages.services.hero.title", "canonicalPath": "global.seo.canonicalBase", "schemaTypes": ["Electrician", "WebPage"] },
+    { "path": "/sobre", "titlePath": "pages.about.seo.title", "descriptionPath": "pages.about.seo.description", "h1Path": "pages.about.hero.title", "canonicalPath": "global.seo.canonicalBase", "schemaTypes": ["Electrician", "AboutPage"] },
+    { "path": "/contato", "titlePath": "pages.contact.seo.title", "descriptionPath": "pages.contact.seo.description", "h1Path": "pages.contact.hero.title", "canonicalPath": "global.seo.canonicalBase", "schemaTypes": ["Electrician", "ContactPage"] },
+    { "path": "/blog", "titlePath": "pages.blog.seo.title", "descriptionPath": "pages.blog.seo.description", "h1Path": "pages.blog.title", "canonicalPath": "global.seo.canonicalBase", "schemaTypes": ["Blog", "WebPage"] }
+  ]},
+  "theme": { "color": { "primary": "#1457FF", "secondary": "#0B1533", "accent": "#22D3EE", "bg": "#F4F8FF", "surface": "#FFFFFF", "fg": "#10203F", "muted": "#667085", "border": "#DDE7F5", "soft": "#EAF6FF", "whatsapp": "#25D366" }, "radius": { "base": "22px" }, "container": { "maxWidth": "1220px" }, "font": { "family": "Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" } }
+}

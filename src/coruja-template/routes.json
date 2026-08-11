@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 2,
+  "routes": [
+    { "type": "page", "path": "/", "pageId": "home" },
+    { "type": "page", "path": "/servicos", "pageId": "services" },
+    { "type": "page", "path": "/sobre", "pageId": "about" },
+    { "type": "page", "path": "/contato", "pageId": "contact" },
+    { "type": "blogList", "path": "/blog", "pageId": "blog", "requiresBlog": true },
+    { "type": "blogPost", "path": "/blog/:slug", "pageId": "blog", "requiresBlog": true }
+  ]
+}

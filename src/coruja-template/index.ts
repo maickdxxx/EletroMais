@@ -1,0 +1,11 @@
+import templateManifest from "../../coruja.template.json";
+import editableSchema from "./editable-schema.json";
+import defaults from "./defaults.json";
+import routes from "./routes.json";
+import integration from "./integration.json";
+import manifest from "./manifest.json";
+import theme from "./theme.json";
+export { templateManifest, editableSchema, defaults, routes, integration, manifest, theme };
+export { CorujaContentGate, CorujaProvider, useCoruja, useContent, useCollection, useWhatsAppUrl, useTelHref, buildWhatsAppHref, getByPath } from "./content.jsx";
+export { fetchCorujaBlogPost, fetchCorujaBlogPosts, fetchCorujaContent, getCorujaApiBase, getCorujaProjectId, isCorujaPublicRuntime } from "./api.js";
+export default { manifest, templateManifest, editableSchema, defaults, routes, integration, theme };

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "templateId": "eletromais",
+  "name": "EletroMais",
+  "version": "1.0.0",
+  "description": "Template claro e tecnológico para eletricistas e empresas de serviços elétricos.",
+  "category": "servicos",
+  "industry": ["eletricista", "servicos-eletricos", "instalacao-eletrica", "manutencao-eletrica"],
+  "language": "pt-BR",
+  "framework": "vite-react-spa",
+  "rendering": "spa",
+  "renderer": { "entry": "src/coruja-template/index.ts", "mode": "compiled_required" },
+  "outputDirectory": "dist",
+  "features": { "seo": true, "blog": true, "services": true, "whatsapp": true, "contactForm": true, "analytics": true, "favicon": true, "optionalPages": false, "collections": true, "themeColors": true, "editableImages": true },
+  "supportsBlog": true,
+  "supportsServices": true,
+  "collections": ["stats", "services", "benefits", "projects", "reviews", "values", "process", "serviceAreas", "faq"],
+  "compatibility": { "corujaHost": ">=2.0.0", "cloudflarePages": true, "customDomain": true, "preview": true },
+  "entry": "src/coruja-template/index.ts",
+  "previewBasePathVar": "__CORUJA_PREVIEW_BASE_PATH__",
+  "contentVars": ["__CORUJA_CONTENT__", "__CORUJA__.content", "__CORUJA_RUNTIME_PAYLOAD__", "__CORUJA_PROJECT_CONTENT__", "__CORUJA_SITE_CONTENT__"]
+}
